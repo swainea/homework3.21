@@ -1,0 +1,23 @@
+$borderStyle: 1px solid black;
+
+@mixin square ($size){
+  height: $size;
+  width: $size;
+}
+
+section {
+  width: 40%;
+  height: 400px;
+  margin: 0 auto;
+  border: $borderStyle;
+  border-radius: 20px;
+  margin-top: 10%;
+}
+
+figure {
+  @include square(100px);
+  border: $borderStyle;
+  border-radius: 5px;
+  float: left;
+}
+ // need a clearfix for things after the figure

@@ -1,0 +1,16 @@
+section {
+  width: 40%;
+  height: 400px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 20px;
+  margin-top: 10%; }
+
+figure {
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 5px;
+  float: left; }
+
+/*# sourceMappingURL=homework3.21.css.map */
