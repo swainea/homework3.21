@@ -5,19 +5,49 @@ $borderStyle: 1px solid black;
   width: $size;
 }
 
+@mixin themeBorder {
+      border: 1px solid black; //sub black for theme color later
+}
+
 section {
-  width: 40%;
+  width: 300px;
   height: 400px;
   margin: 0 auto;
   border: $borderStyle;
   border-radius: 20px;
   margin-top: 10%;
+  position: relative;
 }
-
+// article{             // i used this to try to position my dice in the middle
+//   width: 100%;
+//   height: 100px;
+//   margin-top: 50%;
+//   margin-bottom: 25%;
+// }
 figure {
   @include square(100px);
-  border: $borderStyle;
+  @include themeBorder;
   border-radius: 5px;
-  float: left;
+  box-sizing: border-box;
 }
- // need a clearfix for things after the figure
+
+#leftDice {
+  display: inline-block;
+  margin: 0;
+}
+
+#rightDice {
+  display: inline-block;
+  margin: 0
+}
+
+button{
+  display:inline-block;
+}
+#gameStatus {
+  font-size: 10px;
+  margin: 0;
+}
+footer {
+
+}

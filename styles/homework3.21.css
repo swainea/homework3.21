@@ -1,16 +1,32 @@
 section {
-  width: 40%;
+  width: 300px;
   height: 400px;
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 20px;
-  margin-top: 10%; }
+  margin-top: 10%;
+  position: relative; }
 
 figure {
   height: 100px;
   width: 100px;
   border: 1px solid black;
   border-radius: 5px;
-  float: left; }
+  box-sizing: border-box; }
+
+#leftDice {
+  display: inline-block;
+  margin: 0; }
+
+#rightDice {
+  display: inline-block;
+  margin: 0; }
+
+button {
+  display: inline-block; }
+
+#gameStatus {
+  font-size: 10px;
+  margin: 0; }
 
 /*# sourceMappingURL=homework3.21.css.map */

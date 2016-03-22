@@ -2,38 +2,37 @@ var leftDice = document.getElementById('leftDice');
 var rightDice = document.getElementById('rightDice');
 var button = document.getElementById("rollDiceButton");
 var gameStatus = document.getElementById('gameStatus');
-var rounds = document.getElementById('gameStatus');
+var roundNum = document.getElementById('roundNum');
+var timestamp = document.getElementById('timestamp');
+var startTime = Date.now();
 
 var game = {
-  startTime: 
+  date: new Date(),
   rounds: 0,
   rollDice: function rollDice (){
     this.rounds++;
-    console.log(this.rounds);
     var leftDiceRoll = Math.floor((Math.random() * 6) +1);
     var rightDiceRoll = Math.floor((Math.random() * 6) +1);
     leftDice.innerHTML = leftDiceRoll;
     rightDice.innerHTML = rightDiceRoll;
-
-    console.log(leftDiceRoll + rightDiceRoll);
+    timestamp.innerHTML = "Game Started " + game.date.getFullYear() + "-" + game.date.getMonth() + "-" + game.date.getDate() + " at " + game.date.getHours() + ":" + game.date.getMinutes() ;
     if ((leftDiceRoll + rightDiceRoll) === 7 || (leftDiceRoll + rightDiceRoll) === 11){
-      gameStatus.innerHTML = "Winner! (It took you " + this.rounds + " tries and something.something seconds!";
+      gameStatus.innerHTML = "Winner!";
+      var endTime = Date.now();
+      var elapsed = (endTime - startTime) / 1000;
+      roundNum.innerHTML = "It took you " + this.rounds + " tries and " + elapsed + " seconds!";
       this.rounds = 0;
-
+      startTime = Date.now(); //this does not seem to be resetting properly?
     }
     else{
       gameStatus.innerHTML = "Try Again";
-
+      roundNum.innerHTML = "";
     }
   }
 };
 
-console.log(game.startTime);
 button.addEventListener("click", function buttonClick (){
   game.rollDice();
 });
 
-
-
-
-// var leftDice = Math.floor((Math.random() * 6) +1);
+// timestamp.innerHTML = "Game Started " + game.date.getFullYear() + "-" + game.date.getMonth() + "-" + game.date.getDate() + " at " + game.date.getHours() + ":" + game.date.getMinutes() ;
