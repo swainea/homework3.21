@@ -19,10 +19,10 @@ var game = {
     if ((leftDiceRoll + rightDiceRoll) === 7 || (leftDiceRoll + rightDiceRoll) === 11){
       gameStatus.innerHTML = "Winner!";
       var endTime = Date.now();
-      var elapsed = (endTime - startTime) / 1000;
+      var elapsed = Math.floor((endTime - startTime) / 1000);
       roundNum.innerHTML = "It took you " + this.rounds + " tries and " + elapsed + " seconds!";
       this.rounds = 0;
-      startTime = Date.now(); //this does not seem to be resetting properly?
+      startTime = Date.now();
     }
     else{
       gameStatus.innerHTML = "Try Again";

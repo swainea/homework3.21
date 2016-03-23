@@ -1,32 +1,58 @@
-section {
-  width: 300px;
-  height: 400px;
+main {
+  width: 50%;
   margin: 0 auto;
-  border: 1px solid black;
   border-radius: 20px;
   margin-top: 10%;
-  position: relative; }
+  background-color: #0c3f5f; }
+
+section {
+  margin-top: 2em;
+  margin-bottom: 1em;
+  text-align: center; }
+
+header {
+  height: 4em;
+  text-align: center;
+  font-family: Helvetica;
+  color: white; }
+
+article {
+  text-align: center; }
 
 figure {
   height: 100px;
   width: 100px;
-  border: 1px solid black;
+  border: 3px solid white;
   border-radius: 5px;
   box-sizing: border-box; }
 
-#leftDice {
+.dice {
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 1.5em;
+  color: #0c3f5f;
+  padding-top: 1.2em;
+  vertical-align: middle;
   display: inline-block;
-  margin: 0; }
-
-#rightDice {
-  display: inline-block;
-  margin: 0; }
+  margin: 0;
+  background-color: #d6d6d6; }
 
 button {
-  display: inline-block; }
+  height: 2.5em;
+  margin-bottom: 1em;
+  padding: 0 2em 0 2em;
+  background: none;
+  border: 3px solid white;
+  font-family: Helvetica;
+  color: white; }
 
 #gameStatus {
-  font-size: 10px;
-  margin: 0; }
+  font-size: 2em; }
+
+footer {
+  height: 2em;
+  text-align: center;
+  font-family: Helvetica;
+  color: white; }
 
 /*# sourceMappingURL=homework3.21.css.map */
